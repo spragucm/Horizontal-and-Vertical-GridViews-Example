@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="horz_gv_rows_columns">
+        <item name="rows">1</item>
+        <item name="columns">2</item>
+    </integer-array>
+    <integer-array name="vert_gv_rows_columns">
+        <item name="rows">3</item>
+        <item name="columns">2</item>
+    </integer-array>
+    
+</resources>

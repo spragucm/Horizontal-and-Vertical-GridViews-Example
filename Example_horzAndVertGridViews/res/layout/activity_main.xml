@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!-- Used for better performance and size portions -->
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    
+ 	<!-- Slideshow horz gridview single row -->
+	 <com.jess.ui.TwoWayGridView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/horz_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+	    android:background="#E8E8E8"
+	    app:cacheColorHint="#E8E8E8"
+	    app:verticalSpacing="0dp"
+	    app:horizontalSpacing="0dp"
+	    app:stretchMode="none"
+	    app:scrollDirectionPortrait="horizontal"
+	    app:scrollDirectionLandscape="horizontal"
+	    app:gravity="center"
+	    android:layout_gravity="center"/>
+ 
+	<!-- Source vert gridview multi column multi row -->
+    <com.jess.ui.TwoWayGridView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/vert_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+		  android:background="#E8E8E8"
+		  app:cacheColorHint="#E8E8E8"
+		  app:verticalSpacing="0dp"
+		  app:horizontalSpacing="0dp"
+		  app:stretchMode="spacingWidthUniform"
+		  app:scrollDirectionPortrait="vertical"
+		  app:scrollDirectionLandscape="vertical"
+		  app:gravity="center"/>
+    
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FL height is set java -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/vert_item_padding">
+    
+    <ImageView
+        android:id="@+id/vert_gv_iv"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/vert_gv_tv"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:text="Fill me in"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+    
+
+</FrameLayout>
