@@ -45,10 +45,6 @@ public class MainActivity extends Activity {
 		//As always, get the context
 		mContext = getApplicationContext();
 		
-		//Establish screen size for displaying stuff
-		DisplayMetrics dm = Resources.getSystem().getDisplayMetrics();
-		screenSize(dm);
-		
 		//Get handles to views that will be used
 		horzGridView 
 			= (TwoWayGridView) findViewById(R.id.horz_gridview);
@@ -100,23 +96,4 @@ public class MainActivity extends Activity {
 		return allData;
 	}
 	
-	private void screenSize(DisplayMetrics dm){
-		int minDim = Math.min(dm.widthPixels, dm.heightPixels);
-		int maxDim = Math.max(dm.widthPixels, dm.heightPixels);
-		
-		displayWidth = new int[]{minDim,maxDim};
-		displayHeight = new int[]{maxDim,minDim};
-		
-		//Determine orientation in order to determine wh dims
-		Configuration config = getResources().getConfiguration();
-		switch(config.orientation){
-		case Configuration.ORIENTATION_LANDSCAPE:
-			column_selected = COLUMN_LAND;
-			break;
-		case Configuration.ORIENTATION_PORTRAIT:
-			column_selected = COLUMN_PORT;
-			break;
-		}
-	}
-
 }
