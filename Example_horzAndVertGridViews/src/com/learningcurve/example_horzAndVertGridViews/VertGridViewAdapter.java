@@ -26,7 +26,6 @@ public class VertGridViewAdapter extends BaseAdapter{
 	private Context mContext;
 	
 	//VertGridView stuff
-	//TODO base these on the orientation by using the layout folders and values files
 	private final int childLayoutResourceId = R.layout.vert_gridview_child_layout;
 	private int columns;//Used to set childSize in TwoWayGridView
 	private int rows;//used with TwoWayGridView
@@ -65,7 +64,6 @@ public class VertGridViewAdapter extends BaseAdapter{
 				rowHeight = (int)((float)(MainActivity.vertGridView.getHeight()/rows)-2*itemPadding);
 				columnWidth = (int)((float)(MainActivity.vertGridView.getWidth()/columns)-2*itemPadding);
 				
-				MainActivity.vertGridView.setRowHeight(rowHeight);
 				MainActivity.vertGridView.setColumnWidth(columnWidth);
 				
 				//Then remove the listener
@@ -105,9 +103,7 @@ public class VertGridViewAdapter extends BaseAdapter{
 			handler.iv = (ImageView) convertView.findViewById(R.id.vert_gv_iv);
 			handler.tv = (TextView) convertView.findViewById(R.id.vert_gv_tv);
 			convertView.setTag(handler);
-			
-			//Set height of each row based on previous calculations
-			//((DragDropHorzGridView)parent).setRowHeight(rowHeight);
+
 			
 		}else{
 			handler = (ViewHandler) convertView.getTag();
@@ -117,7 +113,7 @@ public class VertGridViewAdapter extends BaseAdapter{
 		handler.iv.setBackgroundColor(thisData.getColor());
 		handler.tv.setText(thisData.getName());
 		FrameLayout.LayoutParams lp 
-			= new FrameLayout.LayoutParams(columnWidth, rowHeight);// convertView.getLayoutParams();
+			= new FrameLayout.LayoutParams(columnWidth, rowHeight);
 		handler.iv.setLayoutParams(lp);
 
 		Log.d("VertGVAdapter","Position:"+position+",children:"+parent.getChildCount());

@@ -25,7 +25,6 @@ public class HorzGridViewAdapter extends BaseAdapter{
 	private List<DataObject> data;	
 	
 	//HorzGridView stuff
-	//TODO base these on the orientation by using the layout folders and values files
 	private final int childLayoutResourceId = R.layout.horz_gridview_child_layout;
 	private int columns;//Used to set childSize in TwoWayGridView
 	private int rows;//used with TwoWayGridView
@@ -47,7 +46,6 @@ public class HorzGridViewAdapter extends BaseAdapter{
 		
 		//Initialize the layout params
 		MainActivity.horzGridView.setNumRows(rows);
-		//MainActivity.horzGridView.setNumColumns(COLUMNS);
 		
 		//HorzGridView size not established yet, so need to set it using a viewtreeobserver
 		ViewTreeObserver vto = MainActivity.horzGridView.getViewTreeObserver();
@@ -63,7 +61,6 @@ public class HorzGridViewAdapter extends BaseAdapter{
 				columnWidth = (int)((float)(MainActivity.horzGridView.getWidth()/columns)-2*itemPadding);
 				
 				MainActivity.horzGridView.setRowHeight(rowHeight);
-				//MainActivity.horzGridView.setColumnWidth(columnWidth);
 				
 				//Then remove the listener
 				ViewTreeObserver vto = MainActivity.horzGridView.getViewTreeObserver();
@@ -103,9 +100,6 @@ public class HorzGridViewAdapter extends BaseAdapter{
 			handler.iv = (ImageView) convertView.findViewById(R.id.horz_gv_iv);
 			handler.tv = (TextView) convertView.findViewById(R.id.horz_gv_tv);
 			convertView.setTag(handler);
-			
-			//Set height of each row based on previous calculations
-			//((DragDropHorzGridView)parent).setRowHeight(rowHeight);
 			
 		}else{
 			handler = (ViewHandler) convertView.getTag();

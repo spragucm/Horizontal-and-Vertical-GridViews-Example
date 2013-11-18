@@ -54,8 +54,7 @@ public class MainActivity extends Activity {
 		//Create the data for use in the vert gridview-same data will be passed to horz gridview
 		List<DataObject> horzData = generateGridViewObjects();
 		List<DataObject> vertData = generateGridViewObjects();
-		
-		//TODO the horz gridview should be empty on start
+
 		
 		//Create the adapters for the gridviews
 		vertGridViewAdapter = new VertGridViewAdapter(mContext,vertData);
